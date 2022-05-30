@@ -1,0 +1,17 @@
+logging:
+  level:
+    com.example.subwayschedule: DEBUG
+
+feign:
+  metrics:
+    enabled: true
+  httpclient:
+    enabled: true
+    disableSslValidation: true
+  client:
+    config:
+      default:
+        loggerLevel: BASIC
+      subway:
+        name: naverSubway
+        url: https://map.naver.com/v5/api/
